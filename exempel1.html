@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script>
+		function updateParagraph() {
+			document.getElementById("title").innerHTML = "The text value just got updated!!"
+		}
+
+		function getRandomNumber() {
+			document.getElementById('number').innerHTML = Math.random()
+		}
+
+		function displayCalculation() {
+			document.getElementById('elite').innerHTML = 1337 * Math.random()
+		}
+
+		function getPopupWindow() {
+			alert(1337 + 1337)
+		}
+	</script>
+</head>
+
+<body id='body'>
+	<button onclick="console.log('This is how the console log works')">Console.log</button>
+	<button onclick="window.print()">Print this page</button>
+	<h1 onclick="getPopupWindow()">Display Alert!</h1>
+	<h1 id='elite' onclick='displayCalculation()'>1337</h1>
+	<h1 id='title'>The power of JavaScript</h1>
+	<h1 id='name' style="display: none;">Arasto</h1>
+	<h1 id='number' onclick="getRandomNumber()">Click on me for a random number</h1>
+
+	<img id="lightsoff" src="img/pic_bulb_off.gif" style="width:100px" />
+	<button onclick="document.getElementById('lightsoff').src='img/pic_bulb_on.gif'">Power on</button>
+	<button onclick="document.getElementById('lightsoff').src='img/pic_bulb_off.gif'">Power off</button> <br />
+	<button onclick="document.getElementById('title').style.fontSize='80px'">Click me!</button>
+	<button onclick="document.getElementById('title').style.color='orange'">update color</button>
+	<button onclick="document.getElementById('body').style.backgroundColor='green'">update backgroundColor</button>
+	<button onclick="document.getElementById('body').style.display='none'">Remove Everything</button>
+	<button onclick="document.getElementById('name').style.display='block'">Display my name</button>
+	<button onclick="document.getElementById('name').style.display='none'">Remove name</button>
+	<button onclick="updateParagraph()">update text value</button>
+</body>
+
+</html>
